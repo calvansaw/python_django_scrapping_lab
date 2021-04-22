@@ -1,0 +1,9 @@
+body {
+	background-color: aquamarine;
+}
+.card-body {
+	max-width: 200px;
+}
+img {
+	width: 50%;
+}

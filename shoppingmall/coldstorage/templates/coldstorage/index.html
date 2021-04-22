@@ -1,0 +1,31 @@
+{% extends 'coldstorage/layout.html' %}
+{% block body %}
+<div class="container">
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" placeholder="Search" name="search" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="row">
+        {% for product in prod_list %}
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{product.image}}">
+                    <h3>{{product.name}}</h3>
+                    <h4>{{product.brand}}</h4>
+                    <h5>{{product.price}}</h5>
+                    <a href="{{product.link}}">View Product</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock body %}
