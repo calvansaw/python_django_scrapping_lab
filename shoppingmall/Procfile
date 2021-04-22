@@ -1,1 +1,1 @@
-web: gunicorn calvan-scrap.wsgi
+web: gunicorn shoppingmall.wsgi
